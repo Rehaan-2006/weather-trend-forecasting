@@ -3,10 +3,11 @@ numpy
 matplotlib
 seaborn
 plotly
+kaleido
 scikit-learn
 statsmodels
 prophet
 xgboost
-folium
-kaggle
+shap
+scipy
 jupyterlab
