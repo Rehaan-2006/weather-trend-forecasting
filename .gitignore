@@ -1,37 +1,18 @@
-# Dataset (CRITICAL: Do not commit the Kaggle CSV)
 data/
-*.csv
-*.zip
 
-# Python Virtual Environments
 venv/
 .venv/
 env/
-.env/
 
-# Jupyter Notebook Checkpoints
 .ipynb_checkpoints/
 */.ipynb_checkpoints/
 
-# Python Cache and Compiled Files
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 
-# OS Generated Files
 .DS_Store
 .DS_Store?
 ._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
-
-# Output Files (Plots, saved models, etc.)
-outputs/
-*.png
-*.jpg
-*.pdf
-*.pkl
-*.joblib
