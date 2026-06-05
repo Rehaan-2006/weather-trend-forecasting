@@ -7,16 +7,9 @@
 
 ## 📌 About PM Accelerator
 
-**Product Manager Accelerator** helps students land PM job offers in as little as
-60 days — even with no prior experience. Through practical training, expert
-mentorship, and real-world projects, the program equips aspiring and current
-Product Managers with the skills to break into top-tier companies including
-Google, Amazon, Meta, and Microsoft.
+**Product Manager Accelerator Mission** 
 
-PMA also runs **PMA Kids**, a non-profit committed to breaking down financial
-barriers in education — offering free Product Management training to teenagers
-from underserved communities, with a goal of establishing 200 schools worldwide
-over the next 20 years.
+By making industry-leading tools and education available to individuals from all backgrounds, we level the playing field for future PM leaders. This is the PM Accelerator motto, as we grant aspiring and experienced PMs what they need most – Access. We introduce you to industry leaders, surround you with the right PM ecosystem, and discover the new world of AI product management skills.
 
 🔗 [www.pmaccelerator.io](https://www.pmaccelerator.io)
 
