@@ -209,7 +209,7 @@ kaggle, jupyterlab
 
 ## 🎥 Demo Video
 
-🔗 [YouTube link here]
+🔗 [YouTube link here](https://drive.google.com/file/d/131b-O65JNxWhef2EndEaScLnY33-Fh93/view?usp=sharing)
 
 ---
 
