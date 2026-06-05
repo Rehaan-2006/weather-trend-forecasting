@@ -35,11 +35,11 @@ The project targets the **Advanced Assessment**, covering:
 
 weather-trend-forecasting/
 ├── notebooks/
-│   ├── 01_eda.ipynb                # Phases 2–3: Data loading & EDA
-│   ├── 02_preprocessing.ipynb     # Phases 4–5: Cleaning & feature engineering
-│   ├── 03_models.ipynb            # Phase 7:   Forecasting models
-│   └── 04_advanced_analysis.ipynb # Phases 6 & 8: Anomaly detection & advanced
-├── outputs/                       # All saved plots, metrics, and HTML maps
+│   ├── 01_eda.ipynb                
+│   ├── 02_preprocessing.ipynb     
+│   ├── 03_models.ipynb            
+│   └── 04_advanced_analysis.ipynb 
+├── outputs/                       
 │   ├── 01_global_temp_trend.png
 │   ├── 02_temp_by_continent.png
 │   ├── 03_choropleth_temp.png
@@ -61,6 +61,8 @@ weather-trend-forecasting/
 │   ├── 19_choropleth_anomaly_rate.html
 │   ├── 20_temp_by_continent.png
 │   ├── 21_air_quality_correlation.png
+│   ├── minmax_scaler.pkl
+│   ├── xgb_model.pkl
 │   └── model_metrics.csv
 ├── .gitignore
 ├── requirements.txt
@@ -129,7 +131,7 @@ jupyter lab
 
 ## 🔬 Methodology
 
-### Data Cleaning (Phase 4)
+### Data Cleaning 
 - Replaced hidden sentinel values (`-9999`) in air quality columns with `NaN`
 - Clipped physically impossible values (wind > 500 kph, pressure > 1100 mb)
 - Used time-aware **linear interpolation per city** (limit = 6 periods) for
@@ -138,20 +140,20 @@ jupyter lab
 - Flagged outliers using the IQR method without deleting rows, preserving the
   integrity of the time series
 
-### Feature Engineering (Phase 5)
+### Feature Engineering 
 - Parsed `last_updated` into `month`, `hour`, `day_of_year`
 - Created `season` and `continent` columns
 - Built lag features grouped by city: `lag_1`, `lag_7`, `rolling_7`
   (the 257 NaNs in `lag_1` are expected — one per city's first record)
 
-### Anomaly Detection (Phase 6)
+### Anomaly Detection 
 - Trained **Isolation Forest** (`contamination=0.01`) on 4 core features:
   temperature, humidity, wind speed, pressure
 - Detected **1,437 anomalies** (1% of records)
 - Top anomaly countries: Kuwait (172), Iceland (142), Iraq (119) —
   consistent with extreme climate profiles
 
-### Forecasting Models (Phase 7)
+### Forecasting Models 
 - **SARIMA(1,1,1)(1,1,0,7)** — classical statistical baseline
 - **Prophet** — with yearly + weekly seasonality (2 full years confirmed in dataset)
 - **XGBoost** — trained on lag features and calendar variables
